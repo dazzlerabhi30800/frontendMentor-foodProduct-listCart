@@ -1,7 +1,13 @@
+/* NOTE: Font styling */
+@font-face {
+  font-family: Red Hat Font;
+  src: ("./assets/fonts/RedHatText-VariableFont_wght.ttf") format("ttf");
+}
+
 * {
   margin: 0;
-  /* padding: 0; */
   box-sizing: border-box;
+  font-family: Red Hat Font;
 }
 
 :root {
@@ -20,6 +26,7 @@
   --Rose-500: hsl(12, 20%, 44%);
   --Rose-900: hsl(14, 65%, 9%);
 }
+
 body {
   background: var(--Rose-100);
   overflow-x: hidden;
