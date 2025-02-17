@@ -119,7 +119,7 @@ function populateProductWrapper() {
       } 600w, ${image.desktop} 900w" alt=${name} />
                 <div class="product--controls">
 
-                 <div class='cart--controls ${
+                 <div class='cart--controls bg-rose-600 ${
                    searchItem ? "show" : "hide"
                  } '><button onclick="minusToCart('${name}')" class='minus--cart'><i class='fa-solid fa-minus'></i></button><span>${
         searchItem ? searchItem.quantity : 0
