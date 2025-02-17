@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product list with cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main>
+      <!-- Product Listing -->
+      <div class="product--wrapper"></div>
+      <!-- Cart Component -->
+      <div
+        class="cart flex flex-col gap-10 bg-rose-50 p-7 rounded-lg shadow-xl h-fit"
+      >
+        <h2 class="cart--heading text-red-700 text-lg font-bold"></h2>
+        <div class="cart--wrapper flex flex-col gap-8"></div>
+        <!-- Order Total -->
+        <div
+          class="totalPrice py-5 border-t border-gray-400 hidden justify-between items-center"
+        >
+          <p>Order Total</p>
+          <h4>{totalPrice}</h4>
+        </div>
+        <!-- Confirm Order Button -->
+        <button
+          class="w-full text-white font-semibold text-lg py-3 px-10 bg-red-800 hover:bg-red-600 cursor-pointer rounded-3xl hidden confirm--order--btn"
+        >
+          Confirm Order
+        </button>
+      </div>
+      <!-- Confirm Order Component -->
+      <div
+        id="confirm--order--wrapper"
+        class="flex flex-col bg-white fixed bottom-0 md:bottom-[50%] md:left-1/2 md:translate-y-1/2 md:-translate-x-1/2 w-full h-[70%] max-w-[800px] md:h-fit md:max-h-[650px] gap-7 p-5 rounded-md shadow-md hideDialog transition duration-300 linear"
+      >
+        <img
+          src="./assets/images/icon-order-confirmed.svg"
+          class="w-10 h-10 object-cover"
+          alt=""
+        />
+        <div class="flex flex-col gap-1">
+          <h1 class="text-gray-800 text-lg font-bold">Order Confirmed</h1>
+          <p>We hope you enjoy your food!</p>
+        </div>
+        <!-- Product Added -->
+        <div
+          class="confirm--order--container overflow-y-auto flex flex-col p-2 bg-red-50"
+        ></div>
+        <button
+          class="w-full text-white font-semibold text-lg py-3 px-10 bg-red-800 hover:bg-red-600 cursor-pointer rounded-3xl"
+          id="startNew--order--btn"
+        >
+          Start New Order
+        </button>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+  <script src="./functions.js"></script>
+  <script src="./index.js"></script>
+</html>
