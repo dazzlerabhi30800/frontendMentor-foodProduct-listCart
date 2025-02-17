@@ -101,7 +101,7 @@ const productData = [
 ];
 let cartData = JSON.parse(localStorage.getItem("cart")) || [];
 
-const productWrapper = document.querySelector(".product--wrapper");
+const productWrapper = document.querySelector(".product--container");
 const cart = document.querySelector(".cart");
 const totalPrice = document.querySelector(".totalPrice");
 const confirmOrderBtn = document.querySelector(".confirm--order--btn");
@@ -115,15 +115,15 @@ function populateProductWrapper() {
             <div class="product--comp">
             <div class="product--img--container">
                 <img class="product--img" src=${image.mobile} srcset="${
-        image.tablet
-      } 600w, ${image.desktop} 900w" alt=${name} />
+                  image.tablet
+                } 600w, ${image.desktop} 900w" alt=${name} />
                 <div class="product--controls">
 
                  <div class='cart--controls bg-rose-600 ${
                    searchItem ? "show" : "hide"
                  } '><button onclick="minusToCart('${name}')" class='minus--cart'><i class='fa-solid fa-minus'></i></button><span>${
-        searchItem ? searchItem.quantity : 0
-      }</span><button onclick="addToCart('${name}')" class='add--cart'><i class='fa-solid fa-plus'></i></button></div>
+                   searchItem ? searchItem.quantity : 0
+                 }</span><button onclick="addToCart('${name}')" class='add--cart'><i class='fa-solid fa-plus'></i></button></div>
                   <button  class="cart--btn ${
                     searchItem ? "hide" : "show"
                   }" onclick="addToCart('${name}')"><i class='fa-solid fa-cart-shopping'></i> Add To Cart</button>
@@ -158,7 +158,7 @@ function populateCart() {
     .map((item) => {
       let price = parseInt(item.price).toFixed(2);
       let totalPrice = (parseInt(item.price) * parseInt(item.quantity)).toFixed(
-        2
+        2,
       );
       return `
       <div class="cart--comp w-full flex justify-between items-center">
@@ -180,7 +180,7 @@ function populateCart() {
 }
 
 const confirmOrderContainer = document.querySelector(
-  ".confirm--order--container"
+  ".confirm--order--container",
 );
 
 function populateOrderConfirmWrapper() {
@@ -191,7 +191,7 @@ function populateOrderConfirmWrapper() {
   const reduceArr = price.reduce((acc, item) => {
     return parseInt(acc + item);
   }, 0);
-  const totalOrder = `<div class="text-gray-800 py-2 px-4 flex justify-between items-center">
+  const totalOrder = `<div class="text-gray-800 pt-5 pb-2 md:py-2 px-4 flex mb-auto justify-between items-center">
     <p>Order Total</p>
     <h4 class="font-bold text-xl">$${reduceArr}.00</h4>
    </div>`;

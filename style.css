@@ -44,9 +44,11 @@ main {
 
 /* Product Styling */
 .product--wrapper {
+  width: var(--product-wrapper-width);
+}
+.product--container {
   gap: 35px;
   display: grid;
-  width: var(--product-wrapper-width);
   grid-template-columns: var(--product-wrapper-grid);
 }
 .product--comp {

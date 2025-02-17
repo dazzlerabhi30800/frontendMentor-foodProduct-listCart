@@ -26,7 +26,10 @@
   <body>
     <main>
       <!-- Product Listing -->
-      <div class="product--wrapper"></div>
+      <div class="product--wrapper">
+        <h1 class="font-bold text-4xl pb-8 text-red-800">Desserts</h1>
+        <div class="product--container  w-full"></div>
+      </div>
       <!-- Cart Component -->
       <div
         class="cart flex flex-col gap-10 bg-rose-50 p-7 rounded-lg shadow-xl h-fit"
@@ -50,7 +53,7 @@
       <!-- Confirm Order Component -->
       <div
         id="confirm--order--wrapper"
-        class="flex flex-col bg-white fixed bottom-0 md:bottom-[50%] md:left-1/2 md:translate-y-1/2 md:-translate-x-1/2 w-full h-[70%] max-w-[800px] md:h-fit md:max-h-[650px] gap-7 p-5 rounded-md shadow-md hideDialog transition duration-300 linear"
+        class="flex flex-col bg-white fixed left-0 bottom-0 rounded-t-xl md:rounded-t-none shadow-md md:bottom-[50%] md:left-1/2 md:translate-y-1/2 md:-translate-x-1/2 w-full h-[85%] max-w-[800px] md:h-fit md:max-h-[650px] gap-7 p-5 hideDialog transition duration-300 linear"
       >
         <img
           src="./assets/images/icon-order-confirmed.svg"
@@ -63,7 +66,7 @@
         </div>
         <!-- Product Added -->
         <div
-          class="confirm--order--container overflow-y-auto flex flex-col p-2 bg-red-50"
+          class="confirm--order--container flex-1 h-auto overflow-y-auto flex flex-col p-2 bg-red-50"
         ></div>
         <button
           class="w-full text-white font-semibold text-lg py-3 px-10 bg-red-800 hover:bg-red-600 cursor-pointer rounded-3xl"
